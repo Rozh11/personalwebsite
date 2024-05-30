@@ -1143,7 +1143,7 @@
 				});
 			
 				$(window).on("scroll", function(event) {
-					event.preventDefaut();
+					event.preventDefault();
 					event.stopPropagation();
 					// Get the current scroll position
 					var scrollPos = $(this).scrollTop();
@@ -2584,64 +2584,6 @@
 				});
 
 			}
-
-			// function checkWishlistAndCompare() {
-			// 	if ( iGrid.find('.wpr-wishlist-add').length ) {
-			// 		iGrid.find('.wpr-wishlist-add').each(function() {
-			// 			var wishlistBtn = $(this);
-			// 			$.ajax({
-			// 				url: WprConfig.ajaxurl,
-			// 				type: 'POST',
-			// 				data: {
-			// 					action: 'check_product_in_wishlist',
-			// 					product_id: wishlistBtn.data('product-id')
-			// 				},
-			// 				success: function(response) {
-			// 					if ( true == response ) {
-			// 						if ( !wishlistBtn.hasClass('wpr-button-hidden') ) {
-			// 							wishlistBtn.addClass('wpr-button-hidden');
-			// 						}
-
-			// 						if ( wishlistBtn.next().hasClass('wpr-button-hidden') ) {
-			// 							wishlistBtn.next().removeClass('wpr-button-hidden');
-			// 						}
-			// 					}
-			// 				},
-			// 				error: function(error) {
-			// 					console.log(error);
-			// 				}
-			// 			});
-			// 		});
-			// 	}
-
-			// 	if ( iGrid.find('.wpr-compare-add').length ) {
-			// 		iGrid.find('.wpr-compare-add').each(function() {
-			// 			var compareBtn = $(this);
-			// 			$.ajax({
-			// 				url: WprConfig.ajaxurl,
-			// 				type: 'POST',
-			// 				data: {
-			// 					action: 'check_product_in_compare',
-			// 					product_id: compareBtn.data('product-id')
-			// 				},
-			// 				success: function(response) {
-			// 					if ( true == response ) {
-			// 						if ( !compareBtn.hasClass('wpr-button-hidden') ) {
-			// 							compareBtn.addClass('wpr-button-hidden');
-			// 						}
-
-			// 						if ( compareBtn.next().hasClass('wpr-button-hidden') ) {
-			// 							compareBtn.next().removeClass('wpr-button-hidden');
-			// 						}
-			// 					}
-			// 				},
-			// 				error: function(error) {
-			// 					console.log(error);
-			// 				}
-			// 			});
-			// 		});
-			// 	}
-			// }
 
 			function checkWishlistAndCompare() {
 				var wishlistArray;
